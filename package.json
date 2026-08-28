@@ -1,6 +1,6 @@
 {
   "name": "peeknik",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Take a peek at the NIK details",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
