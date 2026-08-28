@@ -14,8 +14,6 @@ Install with your favorite package manager.
 
 ```bash
 npm i peeknik
-# or
-yarn add peeknik
 ```
 
 This will add the latest peeknik release as a
@@ -41,7 +39,7 @@ const data = peeknik(nik)
 //   "region": "KAB. PEMALANG",
 //   "district": "PEMALANG",
 //   "gender": "M",
-//   "dob": 1997-03-11T17:00:00.000Z,
+//   "dob": "1997-03-12", // WIB calendar date (GMT+7)
 //   "unique": "0040"
 // }
 ```

@@ -40,7 +40,7 @@ const peeknik = (id: string | number) => {
   year = Number(now) > Number(year) ? `20${year}` : `19${year}`
 
   const valid = id.length === 16 && !!province?.name && !!region?.name && !!district?.name
-  const dob = new Date(Number(year), month, date)
+  const dob = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`
 
   return {
     valid,
