@@ -41,6 +41,14 @@ describe('peeknik', () => {
     assert.match(result.dob!, /^20\d{2}-03-12$/)
   })
 
+  it('maps two-digit year suffix equal to current year to 20xx', () => {
+    const year = new Date().getFullYear().toString()
+    const result = peeknik(`3327081203${year.substring(2, 4)}0040`)
+
+    assert.equal(result.valid, true)
+    assert.equal(result.dob, `${year}-03-12`)
+  })
+
   it('maps two-digit year suffix to 19xx when suffix is above current year', () => {
     const result = peeknik('3327081203970040')
 

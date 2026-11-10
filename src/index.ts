@@ -37,7 +37,7 @@ const peeknik = (id: string | number) => {
   const gender: 'M' | 'F' = date < 40 ? 'M' : 'F'
 
   date = date > 40 ? date - 40 : date
-  year = Number(now) > Number(year) ? `20${year}` : `19${year}`
+  year = Number(now) >= Number(year) ? `20${year}` : `19${year}`
 
   const valid = id.length === 16 && !!province?.name && !!region?.name && !!district?.name
   const dob = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`
